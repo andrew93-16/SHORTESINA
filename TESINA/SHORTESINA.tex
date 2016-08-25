@@ -43,6 +43,13 @@ l'equazione dell'areodimatica del rotore descritta in tal modo:
 T_{aero}=T(\omega_0,\Omega_0,\beta_0)+\frac{\delta \, T_{aero}}{\delta \, \Omega}+
 \frac{\delta \, T_{aero}}{\delta \, \beta}+\frac{\delta \, T_{aero}}{\delta \, \omega}
 \end{equation} 
+Dove i coefficienti $\gamma=\frac{\delta \, T_{aero}}{\delta \, \Omega}$=-0.1205
+$\sigma=\frac{\delta \, T_{aero}}{\delta \, \beta}$=-2.882,
+$\alpha=\frac{\delta \, T_{aero}}{\delta \, \omega}$=0.0658
+sono gia noti essendo stati ricavati dalla linearizzazione eseguita mediante un metodo numerico non descritto nella pubblicazione di cui si sta facendo uso per il progetto in questione.
+I valori degli stati iniziali sono dati da $\omega_0$=18m/s , $\Omega_0$=42RPM e $\beta_0$=12deg.
+Detto questo siamo passati alla progettazione del controllore, ed \'e stato scelto un controllo PI.
+
 
  
 \end{document}
