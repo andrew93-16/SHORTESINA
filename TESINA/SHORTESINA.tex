@@ -4,6 +4,7 @@
 \usepackage[italian,english]{babel}
 \usepackage{lipsum}
 \usepackage{url}
+\usepackage{graphicx}
 \begin{document}
 \author{Andrea Pagliaro , Alessio Susco \and Shanj Zaccaretti}
 \title{Studio e Progettazione del controllo sulla velocita di rotazione di un gneratore eolico}
@@ -48,8 +49,28 @@ $\sigma=\frac{\delta \, T_{aero}}{\delta \, \beta}$=-2.882,
 $\alpha=\frac{\delta \, T_{aero}}{\delta \, \omega}$=0.0658
 sono gia noti essendo stati ricavati dalla linearizzazione eseguita mediante un metodo numerico non descritto nella pubblicazione di cui si sta facendo uso per il progetto in questione.
 I valori degli stati iniziali sono dati da $\omega_0$=18m/s , $\Omega_0$=42RPM e $\beta_0$=12deg.
-Detto questo siamo passati alla progettazione del controllore, ed \'e stato scelto un controllo PI.
-
-
- 
+Detto questo siamo passati alla progettazione del controllore, ed \'e stato scelto un controllo con guadagno proporzionale per il momento.
+Successivamente si proceder\'a ad inserire i i guadagni giusti per un controllo proporzionale-integrativo(PI).
+Lo schema del sistema con relativo controllo e circuito di gestione per l'event triggering (estratto dal SIMULINK di matlab).
+\begin{center}
+\includegraphics[scale=0.6]{schema1.png}
+\end{center}
+Per quanto riguarda le tecniche di controllo per l'event-triggering ,\'e stato inserito un sistema che riceve l'uscita del nostro processo e il valore del trigger che viene calcolato all'interno dello stesso e che quindi effettua un cambio dello stato solo quando viene commutato il trigger.Avendo fatto le opportune ipotesi , l'intero sistema prima di essere descritto anche in SIMULINK \'e stato simulato attraversato il SIMNON.
+I risultati riportati dalla simulazione per velocita del vento=18 e velocita di rotazione del rotore=42(riferimento) sono i seguenti.
+\begin{center}
+\includegraphics[scale=0.6]{PLOT_OMEGA.png}
+\end{center}
+Dove in questo grafico \'e mostrato l'andamento dell'uscita ovvero del velocita di rotazione del rotore che partendo da 0 raggiunge i 42 RPM in 20 secondi di simulazione.
+Si possono notare i picchi dovuti alla commutazione del trigger.
+\begin{center}
+\includegraphics[scale=0.6]{PLOT_ET.png}
+\end{center}
+Nel seguente invece si sta facendo riferimento alle commutazioni avvenute nell'arco di 20 secondi.
+\begin{center}
+\includegraphics[scale=0.6]{PLOT_UD.png}
+\end{center} 
+L'ultimo grafico mostra un segnale discreto che e' proprio l'ingresso del nostro processo in seguito alla controreazione ottenuta dopo un controlo di tipo proporzionale e dipendente dal trigger di fatto  risulta essere un segnale discreto aperiodico.
+Per quanto riguarda il sistema generale mancano ancora i calcoli da effettuare per i coefficienti da inserire per il controllo dell'event-triggering poiche sono solo di prova ed utilizzati per la simulazione come anche quelli del guadagno proporzionale.
 \end{document}
+
+
