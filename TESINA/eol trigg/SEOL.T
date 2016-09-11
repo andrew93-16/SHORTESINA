@@ -12,7 +12,7 @@ error 1e-6
 
 syst CEOL DEOL CONEOL
 
-store y1 y u w  ET[CEOL] e1 ne nr nx
+store y1 y u w  ET[CEOL] e1 ne nr nx uc[CEOL] er[CEOL]
 
-simu 0 10
+simu 0 20
 END

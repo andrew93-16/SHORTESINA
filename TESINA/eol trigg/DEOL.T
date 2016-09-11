@@ -23,13 +23,13 @@ OUTPUT y x1k
 "y uscita del controllore
 "x1k stato dipendente dal trigger
 
-"---------------------------------------------------------------------------
+"-------------------------------------------------------------------------
 
 " States and time variables:
 
-STATE deltak z1
+STATE deltak z1 I
 
-NEW  deltakp z1p
+NEW  deltakp z1p dI
 TIME t
 TSAMP ts
 
@@ -39,12 +39,13 @@ TSAMP ts
 
 " Equations:
 
+er=x1k-42
 ts=t+delta
-y=e*kp
-e=ud1-x1k
+y=er*kp+ki*I
 deltakp=deltak+ET*(t-deltak)
 z1p=z1+ET*(-z1+ud2)
 x1k=z1
+dI=er
 
 "e errore tra lo stato dipendente dal trigger e riferimento
 "z1 e zp stato e derivato dipendenti dal trigger
@@ -55,8 +56,9 @@ x1k=z1
 
 " Parameter values:
 
-delta=1e-3 "periodo di campionamento
-kp=1 "guadagno proporzionale 
 
+kp= 0.652  "guadagno proporzionale
+ki= 0.347  "guadagno integrativo
+delta=1e-3 "tempo di campionamento
 
 END
