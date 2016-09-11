@@ -7,8 +7,8 @@
 \usepackage{url}
 \usepackage{graphicx}
 \begin{document}
-\author{Andrea Pagliaro , Alessio Susco \and Shanj Zaccaretti}
-\title{Studio e Progettazione del controllo sulla velocita di rotazione di un gneratore eolico}
+\author{Andrea Pagliaro , Alessio Susco, Shanj Raul Ken Zaccaretti}
+\title{Studio e Progettazione del controllo sulla velocità di rotazione di un generatore eolico}
 \maketitle
 \section{Introduzione}
 \section{Modello del sistema}
@@ -58,6 +58,7 @@ Lo schema del sistema con relativo controllo e circuito di gestione per l'event 
 \begin{center}
 \includegraphics[scale=0.6]{eolcont.png}
 \end{center}
+\subsection{Grafici sul controllo continuo}
 \begin{center}
 \includegraphics[scale=0.6]{graph/ycont.png}
 \end{center}
@@ -70,12 +71,21 @@ Lo schema del sistema con relativo controllo e circuito di gestione per l'event 
 \section{Controllo discreto con Event Triggering}
 
 	In questa parte parleremo del controllo discreto con ET della velocità di rotazione di una pala eolica mediante un
-	controllore PI.\\
-	Per iniziare calcoliamo i coefficienti di proporzionalità e di integrazione, partendo dal seguente modello di  			    controllo:\\
+	controllore PI.\\ Qui di seguito lo schema di controllo, dove possiamo notare le prime differenze dallo schema 				precedente.
+	
+\begin{center}
+\includegraphics[scale=0.6]{eoltrig.png}
+\end{center}
+
+	Rispetto allo schema del controllo continuo osserviamo la presenza di un nuovo ramo diretto, dotato a sua volta di un
+	feedback per la gestione dell'ET.\\ \\ \\ \\
+	Per iniziare calcoliamo i coefficienti di proporzionalità e di integrazione del controllo PI, partendo dal seguente 		modello di controllo:\\
 \begin{equation*}
 	u=u_{r}+K_{p}x+K_{i}\int_{0}^{t} x \, d\tau              %------------------modello del controllo---------------
 \end{equation*}	
-	Per farlo utilizzeremo la formula di Ackermann, ma abbiamo prima bisogno di esplicitare il modello dello spazio di
+\subsection{Assegnazione degli autovalori}
+
+	Per calcolarli utilizzeremo la formula di Ackermann, ma abbiamo prima bisogno di esplicitare il modello dello spazio 		di
 	stato in esame:
 
 %-----Spazio di stato del sistema---
@@ -149,7 +159,7 @@ Lo schema del sistema con relativo controllo e circuito di gestione per l'event 
 \end{equation*} \\
 
 
-	A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità abbia rango pieno, essendo quest'ultima 	il più grande sottospazio \\A-invariante contenuto nell'immagine di B.\\
+	A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità abbia rango pieno, essendo quest'ultima 	il più grande sottospazio \\A-invariante contenuto nell'immagine di B.\\ \\
 	Quindi:
 	
 \begin{equation*}
@@ -202,10 +212,143 @@ Lo schema del sistema con relativo controllo e circuito di gestione per l'event 
 	B&AB					
 
 \end{pmatrix}^{-1}p(A)
+\end{equation*} \\
+
+		Dove p(A) è il polinomio caratteristico p($\lambda$) desiderato con $\lambda=A$.\\\\
+	In questo caso per assegnare due autovalori in -1 è stato scelto il seguente polinomio:\\
+
+\begin{equation*}
+	p(\lambda)_{des}=(\lambda+1)^{2}=\lambda^{2}+2\lambda+1        %---------------polinomio caratteristico------------
+\end{equation*} \\
+	
+	ottenendo una matrice triangolare superiore
+	
+\begin{equation*}
+	p(A)=A^{2}+2A+I_{2}=
+\begin{pmatrix}
+
+	1&a+2\\0&a^{2}+2a+1
+
+\end{pmatrix}
+\end{equation*} \\ \\
+
+	La matrice dei coefficienti da trovare può ora essere calcolata come segue:
+
+\begin{equation*}
+	K=
+\begin{pmatrix}
+
+	K_{1}&K_{2}
+
+\end{pmatrix} =                  %---------uguale a----------------
+\begin{pmatrix}
+
+	-\frac{1}{b}&0
+
+\end{pmatrix}
+\begin{pmatrix}
+
+	1&a+2\\0&a^{2}+2a+1
+
+\end{pmatrix} =                   %---------uguale a----------------
+\begin{pmatrix}
+
+	-\frac{1}{b}&-\frac{a+2}{b}
+
+\end{pmatrix} =                    %---------uguale a----------------
+\begin{pmatrix}
+
+	K_{i}&K_{p}
+
+\end{pmatrix} =                    %---------uguale a----------------
+\begin{pmatrix}
+
+	0.347&0.652
+
+\end{pmatrix}
+\end{equation*}\\
+\subsection{Ottimizzazione del criterio d'arresto}
+	Un altro problema da affrontare è il calcolo della norma del prodotto PBK.
+	Abbiamo bisogno di questo valore per gestire in maniera ottimale la soglia del criterio d'arresto nell'ET.\\
+	Per ottenere il prodotto in esame, abbiamo bisogno della matrice P, soluzione dell'equazione di Sylvester, essendo già 	note le matrici B e K.\\ \\ \\ \\
+	Ciò vale, tenendo conto della matrice dinamica $A_{c}$ :\\
+	
+\begin{equation*}
+	A_{c}=A+BK=
+\begin{pmatrix}
+
+	0&1\\-0.0418&-2.9604
+
+\end{pmatrix}
+\end{equation*} \\
+	
+	Per risolvere l'equazione di Sylvester
+	
+\begin{equation*}
+	A_{c}^{T}P + PA_{c} = -Q              %------------equazione di Sylvester----------------
 \end{equation*}
 
+	Scegliamo una matrice Q definita postiva, a piacere.\\
+	Per le nostre simulazioni abbiamo utilizzato una matrice Q del tipo:\\
 
+\begin{equation*}
+	Q=
+\begin{pmatrix}
 
+	\frac{1}{2}&0\\0&657
+
+\end{pmatrix}
+\end{equation*}\\
+	
+	Ottenendo la matrice P dall'equazione di Sylvester mediante il MATLAB:\\
+	
+\begin{equation*}
+	P=
+\begin{pmatrix}
+
+	22.4210&5.9774\\5.9774&112.9844
+
+\end{pmatrix}
+\end{equation*}\\
+
+	E' possibile quindi calcolare il prodotto PBK ed applicarne la norma 2:\\
+	
+\begin{equation*}
+	PBK=
+\begin{pmatrix}
+
+	-0.2500&-0.4697\\-4.7255&-8.8789
+
+\end{pmatrix}
+	\Rightarrow norm_{2}(PBK)=10.0722
+\end{equation*}\\
+
+	L'indice relativo al trigger, $\rho_{max}$ sarà dato infine da:
+	
+\begin{equation*}
+	\rho_{max}=2\frac{\theta}{20.1443} \lambda_{min}^{Q}
+\end{equation*}\\
+
+	con $\lambda_{min}^{Q}$ autovalore minimo della matrice Q, ovvero pari a 0.5 .\\
+	
+	Il $\rho_{max}$ viene utilizzato come indice di peso per la commutazione del coefficiente dell'ET nel codice sorgente.
+	\\ Il coefficiente dell'ET assumerà valore pari a 0, ovvero non agendo sul controllore, se il modulo dell'errore        	$n_{e}$ si mantiene sotto una certa soglia, definita proprio da:
+	
+\begin{equation*}
+	n_{r}=\rho_{max}n_{x}
+\end{equation*}
+
+	con $n_{x}$ modulo dell'uscita.
+	Altrimenti l'ET assume valore pari a 1, agendo sul sistema e quindi andando a stabilizzare il controllo.
+	
+\subsection{Grafici sul controllo discreto}
+
+\begin{center}
+\includegraphics[scale=0.6]{graph/ydisc.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{graph/udisc.png}
+\end{center}
 
 
 
