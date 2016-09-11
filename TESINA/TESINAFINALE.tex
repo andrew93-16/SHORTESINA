@@ -61,77 +61,37 @@ sono gia noti essendo stati ricavati dalla linearizzazione eseguita mediante un 
 I valori degli stati iniziali sono dati da $\omega_0$=18m/s , $\Omega_0$=42RPM e $\beta_0$=12deg.
 %----inzio parte controllo nel xaso continuo
 \section{Controllo continuo}
-Detto questo siamo passati alla progettazione del controllore scegliendo un controllo PI,ovvero proporzionale-intergrativo.
-Per rendere i calcoli delle costanti pi\'u semplici \'e stato effettuato un cambio di variabile.
+Detto questo siamo passati alla progettazione del controllore scegliendo un controllo PI,ovvero proporzionale-intergrativo.\\
+Quindi dapprima dobbiamo pensare di avere una retroazione dello stato e
+per rendere i calcoli delle costanti pi\'u semplici \'e stato effettuato un cambio di variabile.
 \'E stato quindi posto e come l'errore tra l'uscita e il riferimento
-\begin{equation}
-e=x-xr        poich\'e y=C*x    dove C=1
-\end{equation}
-La sua derivata e' rappresentata quindi come :
-
-Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e rappresentato da:
-\begin{center}
-\includegraphics[scale=0.6]{eolcont.png}
-\end{center}
-\subsection{Grafici sul controllo continuo}
-\begin{center}
-\includegraphics[scale=0.6]{graph/ycont.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.6]{graph/ucont.png}
-\end{center}
-
-%-------------Inizio parte discreta-----------------------
-
-\section{Controllo discreto con Event Triggering}
-
-	In questa parte parleremo del controllo discreto con ET della velocità di rotazione di una pala eolica mediante un
-	controllore PI.\\ Qui di seguito lo schema di controllo, dove possiamo notare le prime differenze dallo schema 				precedente.
-	
-\begin{center}
-\includegraphics[scale=0.6]{eoltrig.png}
-\end{center}
-
-	Rispetto allo schema del controllo continuo osserviamo la presenza di un nuovo ramo diretto, dotato a sua volta di un
-	feedback per la gestione dell'ET.\\ \\ \\ \\
-	Per iniziare calcoliamo i coefficienti di proporzionalità e di integrazione del controllo PI, partendo dal seguente 		modello di controllo:\\
-\begin{equation*}
-	u=u_{r}+K_{p}x+K_{i}\int_{0}^{t} x \, d\tau              %------------------modello del controllo---------------
-\end{equation*}	
-\subsection{Assegnazione degli autovalori}
-
-	Per calcolarli utilizzeremo la formula di Ackermann, ma abbiamo prima bisogno di esplicitare il modello dello spazio 		di
-	stato in esame:
-
-%-----Spazio di stato del sistema---
-\[Plant	:
-\begin{cases}
-	
-	\dot{I_{e}}= e \\
-	\dot{e} = ae + bu
-	
-\end{cases}\]
-%-----------------------------------
-	Questo perchè sappiamo che l'errore è dato da:
-
 \begin{equation*}
 	e=x-x_{r}          %--------------------errore---------------------------
 \end{equation*}
-	
-	e la dinamica dello stato è:
+Voglio che e tenda a 0 per t tendente ad infinito e sapendo che la dinamica dello stato è:
 %-----derivata dello stato-----	
 \begin{equation*}
 	\dot{x}=ax+bu+\gamma w_{d}    %-----------------derivata dello stato------------ 
 \end{equation*} \\
-	
-	Quindi:
+Quindi:
 
 \begin{equation*}
 	\dot{e}=\dot{x}=a(e+x_{r})+bu+\gamma w_{d}\,\,\:           %-------------spiegazione equazione--------
-	\Rightarrow u=-\frac{\gamma}{b} w_{d}-\frac{a}{b} x_{r}
+	\Rightarrow u=u_e-\frac{a}{b} x_{r}-\frac{\gamma}{b} w_{d}
 \end{equation*} \\
+Dove $u_e$ rappresenter\'a l'errore desiderato che nel nostro caso \'e zero.\\
+Volendo attivare un controllo di tipo intergrativo oltre a quello proporzionale
+inserisco un ulteriore stao che chiamer\'o $I_e$.\\
+A questo punto ottengo un sistema del tipo :
+\[Plant	:
+\begin{cases}
+	
+	\dot{I_{e}}= e \\
+	\dot{e} = a\,e + b\,u_e
+	
+\end{cases}\]
 
-	Arrivati a questo punto, dal modello di spazio stato\\
+Percio il modello del nostro spazio di stato sar\'a riscritto in tal modo:
 \begin{equation*}	
 \begin{pmatrix}
 	
@@ -152,8 +112,9 @@ Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e ra
 
 	0\\b
 
-\end{pmatrix} u
+\end{pmatrix} u_e
 \end{equation*} \\
+Per andare a calcolare i guadagni dei singoli controlli\\
 
 	Esplicitiamo la matrice dinamica A:        %-------matrice A------------
 \begin{equation*}
@@ -173,8 +134,27 @@ Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e ra
 \end{pmatrix}
 \end{equation*} \\
 
+%Per calcolarli utilizzeremo la formula di Ackermann, ma abbiamo prima bisogno di esplicitare il modello %dello spazio 		di
+%	stato in esame:
+Per quanto concerne l'ingresso del processo principale relativo allo stato x ,
+viene visto nella seguente forma
 
-	A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità abbia rango pieno, essendo quest'ultima 	il più grande sottospazio \\A-invariante contenuto nell'immagine di B.\\ \\
+	
+\begin{equation*}
+	u_x=K_{p}\,e+K_{i}\int_{0}^{t} e \, d\tau              %------------------modello del controllo---------------
+\end{equation*}	
+Il nostro sistema controllato a questo punto si presenta cos\'i :
+
+\begin{center}
+\includegraphics[scale=0.6]{eolcont.png}
+\end{center}
+
+Dove non viene rappresentato lo schema dell'errore ma una visione pi\'u reale del sistema
+dove CEOL rappresenta il nostro rotore , e ctrlCEOL il controllo effettuato a monte del processo la cui uscita andr\'a a stimare il pitch delle pale.\\
+Mentre xref il valore per cui si vuole che il rotore giri e in questo caso 42 RPM.
+Andiamo a calcolare gli autovalori mediante il teorema dell'assegnazione degli autovalori.
+\subsection{Assegnazione degli autovalori}
+A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità abbia rango pieno, essendo quest'ultima 	il più grande sottospazio \\A-invariante contenuto nell'immagine di B.\\ \\
 	Quindi:
 	
 \begin{equation*}
@@ -282,6 +262,45 @@ Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e ra
 
 \end{pmatrix}
 \end{equation*}\\
+
+\subsection{Grafici sul controllo continuo}
+Dai risultati ottenuti , adesso c'\'e bisogno di capire se i conti tornano.\\
+Per questo attraverso il simnon \'e stato possibile implementare il sistema per valutarne i risultati mediante simulazioni.
+Nel seguente grafico viene mostrata la risposta del sistema per un ingresso di riferimento $u_r$=42 e
+$\omega$=18,ovviamente essendo 42 il valore desiderato non terremo conto di $\omega$ ma bisogna comunque
+tener presente che rappresentando la velocit\'a del vento ha un importante ripercussione sula dinamica del 
+rotore
+\begin{center}
+\includegraphics[scale=0.6]{graph/ycont.png}
+\end{center}
+Nel prossimo grafico invece andiamo ad esaminare l'azione controllante esercita dal PI. 
+\begin{center}
+\includegraphics[scale=0.6]{graph/ucont.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{graph/ycontsin.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{graph/ucontsin.png}
+\end{center}
+
+Una volta constato che i valori calcolati per il controllo PI danno un ottima risposta 
+da parte del sistema , siamo andati ad adattare il nostro sistema per effettuare un controllo digitale.\\
+Non andremo direttamente a tradurre tutto il processo nell'ambito discreto ma faremo in modo che esso funzioni secondo tecniche di event-triggering.
+%-------------Inizio parte discreta-----------------------
+
+\section{Controllo discreto con Event Triggering}
+
+	In questa parte parleremo del controllo discreto con ET della velocità di rotazione di una pala eolica mediante un
+	controllore PI.\\ Qui di seguito lo schema di controllo, dove possiamo notare le prime differenze dallo schema 				precedente.
+	
+\begin{center}
+\includegraphics[scale=0.6]{eoltrig.png}
+\end{center}
+
+	Rispetto allo schema del controllo continuo osserviamo la presenza di un nuovo ramo diretto, dotato a sua volta di un
+	feedback per la gestione dell'ET.\\ \\ \\ \\
+	
 \subsection{Ottimizzazione del criterio d'arresto}
 	Un altro problema da affrontare è il calcolo della norma del prodotto PBK.
 	Abbiamo bisogno di questo valore per gestire in maniera ottimale la soglia del criterio d'arresto nell'ET.\\
@@ -363,6 +382,18 @@ Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e ra
 \end{center}
 \begin{center}
 \includegraphics[scale=0.6]{graph/udisc.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.4]{graph/trigger1.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{graph/ydiscsin.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{graph/udiscsin.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.4]{graph/trigger2.png}
 \end{center}
 
 
