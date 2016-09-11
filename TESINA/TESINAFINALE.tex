@@ -30,13 +30,13 @@ Chiaramente la funzione del coefficiente di potenza comporta delle dinamiche non
 lineari dipendenti dalla geometria del rotore questo a sua volta si ripercuote sull'intero sistema che lo rende non lineare.  
 Ora provando a linearizzare il sistema ci \'e risultato molto difficile e solo dopo aver letto alcune pubblicazioni sullo studio di turbine eoliche siamo riusciti a trovare alcune linearizzazioni compiute mediante metodi numerici, che ci hanno permesso di riscrivere il sistema nella seguente forma:
 \begin{equation}
-\dot{x_1}=\frac{\gamma}{I_{rot}}\,x_1+\frac{\sigma}{I_{rot}}\,\delta_\beta+\frac{\alpha}{I_{rot}}\,\delta_\omega
+\dot{x}=\frac{\gamma}{I_{rot}}x1+\frac{\sigma}{I_{rot}}\,\delta_\beta+\frac{\alpha}{I_{rot}}\,\delta_\omega
 \end{equation}
-Dove $x_1$ , lo stato del sistema rappresenta la velocità angolare del rotore ,
+Dove $x$ , lo stato del sistema rappresenta la velocità angolare del rotore ,
 $\delta_\beta$ \'e l'ingresso relativo alla perturbazione da parte del pitch,
 $\delta_\omega$ \'e la perturbazione relativa alla velocità del vento.
 Quindi la nostra matrice di stato \'e data da $A=\frac{\gamma}{I_{rot}}$,
-e i coefficienti dei rispettivi ingressi:
+e i coefficienti dei rispettivi ingressi/uscite:
 $B=\frac{\sigma}{I_{rot}}$
 $\Gamma=\frac{\alpha}{I_{rot}}$
 Irot rappresenta inerzia del rotore.
@@ -51,10 +51,17 @@ $\sigma=\frac{\delta \, T_{aero}}{\delta \, \beta}$=-2.882,
 $\alpha=\frac{\delta \, T_{aero}}{\delta \, \omega}$=0.0658
 sono gia noti essendo stati ricavati dalla linearizzazione eseguita mediante un metodo numerico non descritto nella pubblicazione di cui si sta facendo uso per il progetto in questione.
 I valori degli stati iniziali sono dati da $\omega_0$=18m/s , $\Omega_0$=42RPM e $\beta_0$=12deg.
+%----inzio parte controllo nel xaso continuo
 \section{Controllo continuo}
-Detto questo siamo passati alla progettazione del controllore, ed \'e stato scelto un controllo con guadagno proporzionale per il momento.
-Successivamente si proceder\'a ad inserire i i guadagni giusti per un controllo proporzionale-integrativo(PI).
-Lo schema del sistema con relativo controllo e circuito di gestione per l'event triggering (estratto dal SIMULINK di matlab).
+Detto questo siamo passati alla progettazione del controllore scegliendo un controllo PI,ovvero proporzionale-intergrativo.
+Per rendere i calcoli delle costanti pi\'u semplici \'e stato effettuato un cambio di variabile.
+\'E stato quindi posto e come l'errore tra l'uscita e il riferimento
+\begin{equation}
+e=x-xr        poich\'e y=C*x    dove C=1
+\end{equation}
+La sua derivata e' rappresentata quindi come :
+
+Lo schema del sistema con relativo controllo e circuito nel caso continuo \'e rappresentato da:
 \begin{center}
 \includegraphics[scale=0.6]{eolcont.png}
 \end{center}
