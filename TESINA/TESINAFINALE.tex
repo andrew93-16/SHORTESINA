@@ -14,11 +14,27 @@
 \begin{center}
 \includegraphics[scale=0.6]{graph/paleoliche.jpg}
 \end{center}
-Una turbina eolica \'e un dispositivo per estrarre energia dal vento.\\
-Tipicamente, il suo rotore \'e progettato in modo da avere tanti gradi di libert\'a
-che gli permettano di percepire un flusso del vento tale da ottenere grandi valori potenza.\\
-Ovviamente tutto questo deve essere controllato!\\
-I controlli fondamentali sono quelli attuati sullo yaw(angolo del rotore rispetto la direzione del vento) e sul pitch , nel seguente testo verr\'a illustrato come funziona quest'ultimo.   
+
+Una turbina eolica \'e un dispositivo che consente di estrarre energia dal vento , la quale \'e composta da una torre alla cui estremita\'a \'e fissata una carlinga contenente il generatore il quale \'e collegato al rotore attraverso la trasmissione.
+Il rotore presenta due pale ad inclinazione variabile (blade pitch angle).
+In alcune macchine l'inclinazione delle pale varia indipendentemente l'una dall'altra (indipendent blade pitch) , nel nostro caso , l'inclinazione di ogni pala varier\'a identicamente (blade collective pitch).
+Il generatore \'e progettato in base alle specifiche della rete a cui \'e accoppiato, in generale , la velocit\'a rotorica del generatore \'e variabile , nel nostro caso \'e fissata in base alla frequenza della rete.
+La coppia aerodinamica \'e trasferita al generatore attraverso la trasmissione (drive train).
+La velocit\'a di rotazione del generatore \'e tipicamente di 1500 rpm , invece , la velocit\'a del rotore si aggira tra le 20 e le 40 rivoluzioni al minuto.
+Le turbine eoliche possono produrre vari tipi di moti risultanti : dalla rotazione tra il rotore e il generatore , dall'imbardata (yaw) e dal rollio (roll) della carlinga e dalle flessioni elastiche delle pale , della trasmissione e della torre.
+Le turbine eoliche possono essere progettate come "downwind machines" o "upwind machines".
+Nelle "downwind machines" , il vento attraversa prima la torre per poi investire il rotore , mentre accade l'opposto nelle "upwind machines".
+La differenza sostanziale sta nel fatto che nelle "downwind machines" l'imbardata \'e stabile e pu\'o essere non vincolata (free yaw) , cio\'e la turbina \'e in grado di orientarsi in direzione del vento senza essere controllata (yaw-driven).
+Questo non accade per le "upwind machines" dove \'e necessario implementare un controllo che orienti la turbina nella direzione del vento.
+Le turbine eoliche possono essere classificate come:
+\begin{itemize}
+\item a velocit\'a fissa (dove il rotore e il generatore ruotano a velocit\'a costante);
+\item a velocit\'a variabile.
+\end{itemize}
+L'obiettivo di questo progetto \'e implementare un sistema di controllo che mantenga la velocit\'a di rotazione della turbina intorno ad un valore di riferimento, agendo sull'inclinazione delle pale (rotor collective pitch control).
+Saranno quindi trascurati i moti risultanti agenti sulla struttura e faremo riferimento ad una turbina eolica a velocit\'a fissa con imbardata non vincolata (free yaw downwind machines).
+Sar\'a anche trascurato il ritardo dovuto all'attuatore per le variazioni sull'angolo di pitch.
+
 \section{Modello del sistema}
 Per far si , che il rotore giri ad una velocit\'a costante in modo che la stessa corrente prodotta non abbia variazioni di frequenza, viene scelto di imporre una giusta angolazione delle pale a seconda della velocit\'a del vento.\\
 Gli studi e le ricerche effettuate ci hanno permesso di estrarre equazione di vario genere , ne mostreremo alcune :
