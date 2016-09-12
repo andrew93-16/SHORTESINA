@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.5)  11 SEP 2016 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.6.25)  12 SEP 2016 14:33
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**SHORTESINA.tex
-(./SHORTESINA.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 6 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+**./SHORTESINA.tex
+(SHORTESINA.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,40 +21,46 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count87
 \uc@combtoks=\toks16
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/02/24 3.9q The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-italian/italian.ldf
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-italian\itali
+an.ldf
 Language: italian 2015/03/26 v1.3n Italian support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/02/24 3.9q Babel common definitions
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -64,20 +68,20 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \it@doublequoteactive=\count90
 \it@ISOcompliance=\count91
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
 Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.s
+ty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count92
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks19
 \symAMSa=\mathgroup4
@@ -85,31 +89,31 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen104
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 199.
@@ -124,8 +128,8 @@ LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count98
 \c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
@@ -146,43 +150,43 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\lipsum\lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count106
 ))
@@ -193,7 +197,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 LaTeX Warning: Unused global option(s):
     [13pt].
 
-(./SHORTESINA.aux)
+(SHORTESINA.aux)
 \openout1 = `SHORTESINA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -208,13 +212,15 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
- (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Info: Redefining \it@ocap on input line 9.
 LaTeX Info: Redefining \it@ccap on input line 9.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mki
+i
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen115
@@ -227,40 +233,39 @@ LaTeX Info: Redefining \it@ccap on input line 9.
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks27
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -269,33 +274,30 @@ Package etexcmds Info: Could not find \expanded.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 12.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+(C:\Users\ShanjRaulKen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [1
+)
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<schema1.png, id=15, 578.16pt x 283.0575pt>
+{C:/Users/ShanjRaulKen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<schema1.png, id=14, 578.16pt x 283.0575pt>
 File: schema1.png Graphic file (type png)
  <use schema1.png>
 Package pdftex.def Info: schema1.png used on input line 57.
@@ -305,13 +307,13 @@ Overfull \hbox (1.89867pt too wide) in paragraph at lines 57--58
  [] 
  []
 
-<PLOT_OMEGA.png, id=16, 434.62375pt x 416.55624pt>
+<PLOT_OMEGA.png, id=15, 434.62375pt x 416.55624pt>
 File: PLOT_OMEGA.png Graphic file (type png)
  <use PLOT_OMEGA.png>
 Package pdftex.def Info: PLOT_OMEGA.png used on input line 62.
 (pdftex.def)             Requested size: 260.77626pt x 249.93567pt.
 
-[2 <./schema1.png>] <PLOT_ET.png, id=20, 642.4pt x 357.335pt>
+[2 <./schema1.png>] <PLOT_ET.png, id=19, 642.4pt x 357.335pt>
 File: PLOT_ET.png Graphic file (type png)
 
 <use PLOT_ET.png>
@@ -328,7 +330,7 @@ Overfull \hbox (6.83075pt too wide) in paragraph at lines 69--70
 zioni avvenute nell'arco
  []
 
-<PLOT_UD.png, id=21, 639.38875pt x 345.29pt>
+<PLOT_UD.png, id=20, 639.38875pt x 345.29pt>
 File: PLOT_UD.png Graphic file (type png)
  <use PLOT_UD.png>
 Package pdftex.def Info: PLOT_UD.png used on input line 71.
@@ -373,31 +375,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-[5] (./SHORTESINA.aux) ) 
+[5] (SHORTESINA.aux) ) 
 Here is how much of TeX's memory you used:
- 4441 strings out of 494901
- 56573 string characters out of 6179487
- 225728 words of memory out of 5000000
- 7638 multiletter control sequences out of 15000+600000
- 14458 words of font info for 51 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 37i,9n,26p,821b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/andy/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
-m1000.600pk> </home/andy/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
- </home/andy/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/andy
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
->
-Output written on SHORTESINA.pdf (5 pages, 134846 bytes).
+ 4441 strings out of 493335
+ 57306 string characters out of 3136659
+ 229980 words of memory out of 3000000
+ 7872 multiletter control sequences out of 15000+200000
+ 14458 words of font info for 51 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,9n,26p,823b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ShanjRaulKen\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\ShanjRaulKen\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\ShanjRaulKen
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\U
+sers\ShanjRaulKen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+crm1728.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on SHORTESINA.pdf (5 pages, 148003 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

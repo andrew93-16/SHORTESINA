@@ -264,22 +264,24 @@ A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità 
 \end{equation*}\\
 
 \subsection{Grafici sul controllo continuo}
-Dai risultati ottenuti , adesso c'\'e bisogno di capire se i conti tornano.\\
-Per questo attraverso il simnon \'e stato possibile implementare il sistema per valutarne i risultati mediante simulazioni.
+Dai risultati, verifichiamo che i valori ottenuti rispecchino la teoria. \\
+Per questo attraverso il Simnon \'e stato possibile implementare il sistema per valutarne i risultati mediante le simulazioni.
 Nel seguente grafico viene mostrata la risposta del sistema per un ingresso di riferimento $u_r$=42 e
-$\omega$=18,ovviamente essendo 42 il valore desiderato non terremo conto di $\omega$ ma bisogna comunque
-tener presente che rappresentando la velocit\'a del vento ha un importante ripercussione sula dinamica del 
-rotore
+$\omega$=18, ovviamente essendo 42 il valore desiderato non terremo conto di $\omega$ ma bisogna comunque
+tener presente che rappresentando la velocit\'a del vento ha un importante riscontro sulla dinamica del 
+rotore.
 \begin{center}
 \includegraphics[scale=0.6]{graph/ycont.png}
 \end{center}
-Nel prossimo grafico invece andiamo ad esaminare l'azione controllante esercita dal PI. 
+Nel prossimo grafico invece andiamo ad esaminare l'azione controllante esercitata dal PI. 
 \begin{center}
 \includegraphics[scale=0.6]{graph/ucont.png}
 \end{center}
+	Qui di seguito sono stati inseriti due grafici nel caso in cui il segnale di velocità del vento sia di tipo 				sinusoidale. Il nostro controllo non prevede una gestione adatta al controllo di disturbi sinusoidali e, come si 			osserva a seguire, il valore picco picco dell'oscillazione si mantiene comunque vicino al valore desiderato pari a 42 		RPM. \\
 \begin{center}
 \includegraphics[scale=0.6]{graph/ycontsin.png}
 \end{center}
+	Notiamo nel grafico seguente che l'azione controllante nel caso di disturbo sinusoidale produce oscillazioni rispetto 		al valore medio osservato precedentemente nell'azione di controllo del PI.\\ Questi risultati verranno commentati 			anche nella sezione di controllo discreto, per una migliore visione d'insieme sui risultati ottenuti. \\
 \begin{center}
 \includegraphics[scale=0.6]{graph/ucontsin.png}
 \end{center}
@@ -370,28 +372,38 @@ Non andremo direttamente a tradurre tutto il processo nell'ambito discreto ma fa
 	
 \begin{equation*}
 	n_{r}=\rho_{max}n_{x}
-\end{equation*}
+\end{equation*} \\
 
 	con $n_{x}$ modulo dell'uscita.
 	Altrimenti l'ET assume valore pari a 1, agendo sul sistema e quindi andando a stabilizzare il controllo.
 	
 \subsection{Grafici sul controllo discreto}
-
+	
+	Andiamo ora a discutere sui grafici ottenuti dal Simnon per quanto riguarda la simulazione nel tempo discreto.\\
+	Osserviamo dal grafico seguente l'andamento del segnale d'uscita, e se lo confrontiamo con quello a tempo continuo, ci 	accorgiamo della bontà dell'azione dell'ET sul controllo del sistema, notando tutte le commutazioni che in uscita si 		traducono in una alternanza di valori che portano asintoticamente al valore desiderato di 42 RPM.
+	
 \begin{center}
 \includegraphics[scale=0.6]{graph/ydisc.png}
-\end{center}
+\end{center} 
+	A seguire l'azione controllante a tempo discreto esercitata dal controllore PI. \\
+	Notiamo inoltre l'azione dell'ET sul sistema osservando le continue commutazioni del segnale di controllo, assicurando 	stabilità al processo. E' presente inoltre un maggiore sforzo di controllo da parte del trigger fino ai 6 secondi, 			dovendo assestare con maggiore frequenza il contributo iniziale dell'uscita. \\ \\ 
 \begin{center}
-\includegraphics[scale=0.6]{graph/udisc.png}
+\includegraphics[scale=0.6]{graph/udisc.png} 
 \end{center}
+	Di seguito troviamo gli istanti di tempo in cui l'ET va ad agire sul controllo a tempo discreto.\\
 \begin{center}
 \includegraphics[scale=0.4]{graph/trigger1.png}
 \end{center}
+	La frequenza all'inizio è maggiore come illustrato precedentemente, fino ad assestarsi in corrispondenza del valore 		d'uscita desiderato.\\
+	Nel caso invece di segnale di velocità del vento di tipo sinusoidale, nel tempo discreto abbiamo un margine 				d'affidabilità peggiore rispetto al caso continuo, avendo in uscita sempre delle commutazioni ma con valori non troppo 	vicini a quelli desiderati.
 \begin{center}
 \includegraphics[scale=0.6]{graph/ydiscsin.png}
 \end{center}
+	Osserviamo nel grafico a seguire l'azione di controllo per disturbi sinusoidali.
 \begin{center}
 \includegraphics[scale=0.6]{graph/udiscsin.png}
 \end{center}
+	Nel grafico seguente le relative commutazioni del segnale di trigger.
 \begin{center}
 \includegraphics[scale=0.4]{graph/trigger2.png}
 \end{center}
