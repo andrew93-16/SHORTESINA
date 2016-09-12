@@ -138,7 +138,6 @@ Per andare a calcolare i guadagni dei singoli controlli\\
 %	stato in esame:
 Per quanto concerne l'ingresso del processo principale relativo allo stato x ,
 viene visto nella seguente forma
-<<<<<<< HEAD
 
 	
 \begin{equation*}
@@ -150,19 +149,6 @@ Il nostro sistema controllato a questo punto si presenta cos\'i :
 \includegraphics[scale=0.6]{eolcont.png}
 \end{center}
 
-=======
-
-	
-\begin{equation*}
-	u_x=K_{p}\,e+K_{i}\int_{0}^{t} e \, d\tau              %------------------modello del controllo---------------
-\end{equation*}	
-Il nostro sistema controllato a questo punto si presenta cos\'i :
-
-\begin{center}
-\includegraphics[scale=0.6]{eolcont.png}
-\end{center}
-
->>>>>>> origin/master
 Dove non viene rappresentato lo schema dell'errore ma una visione pi\'u reale del sistema
 dove CEOL rappresenta il nostro rotore , e ctrlCEOL il controllo effettuato a monte del processo la cui uscita andr\'a a stimare il pitch delle pale.\\
 Mentre xref il valore per cui si vuole che il rotore giri e in questo caso 42 RPM.
@@ -278,7 +264,6 @@ A questo punto per Ackermann abbiamo bisogno che la matrice di raggiungibilità 
 \end{equation*}\\
 
 \subsection{Grafici sul controllo continuo}
-<<<<<<< HEAD
 Dai risultati, verifichiamo che i valori ottenuti rispecchino la teoria. \\
 Per questo attraverso il Simnon \'e stato possibile implementare il sistema per valutarne i risultati mediante le simulazioni.
 Nel seguente grafico viene mostrata la risposta del sistema per un ingresso di riferimento $u_r$=42 e
@@ -297,24 +282,6 @@ Nel prossimo grafico invece andiamo ad esaminare l'azione controllante esercitat
 \includegraphics[scale=0.6]{graph/ycontsin.png}
 \end{center}
 	Notiamo nel grafico seguente che l'azione controllante nel caso di disturbo sinusoidale produce oscillazioni rispetto 		al valore medio osservato precedentemente nell'azione di controllo del PI.\\ Questi risultati verranno commentati 			anche nella sezione di controllo discreto, per una migliore visione d'insieme sui risultati ottenuti. \\
-=======
-Dai risultati ottenuti , adesso c'\'e bisogno di capire se i conti tornano.\\
-Per questo attraverso il simnon \'e stato possibile implementare il sistema per valutarne i risultati mediante simulazioni.
-Nel seguente grafico viene mostrata la risposta del sistema per un ingresso di riferimento $u_r$=42 e
-$\omega$=18,ovviamente essendo 42 il valore desiderato non terremo conto di $\omega$ ma bisogna comunque
-tener presente che rappresentando la velocit\'a del vento ha un importante ripercussione sula dinamica del 
-rotore
-\begin{center}
-\includegraphics[scale=0.6]{graph/ycont.png}
-\end{center}
-Nel prossimo grafico invece andiamo ad esaminare l'azione controllante esercita dal PI. 
-\begin{center}
-\includegraphics[scale=0.6]{graph/ucont.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.6]{graph/ycontsin.png}
-\end{center}
->>>>>>> origin/master
 \begin{center}
 \includegraphics[scale=0.6]{graph/ucontsin.png}
 \end{center}
@@ -437,18 +404,6 @@ Non andremo direttamente a tradurre tutto il processo nell'ambito discreto ma fa
 \includegraphics[scale=0.6]{graph/udiscsin.png}
 \end{center}
 	Nel grafico seguente le relative commutazioni del segnale di trigger.
-\begin{center}
-\includegraphics[scale=0.4]{graph/trigger2.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.4]{graph/trigger1.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.6]{graph/ydiscsin.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.6]{graph/udiscsin.png}
-\end{center}
 \begin{center}
 \includegraphics[scale=0.4]{graph/trigger2.png}
 \end{center}
