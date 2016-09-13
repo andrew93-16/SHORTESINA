@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.5)  12 SEP 2016 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.5)  12 SEP 2016 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -301,277 +301,288 @@ Package pdftex.def Info: graph/paleoliche.jpg used on input line 15.
 (pdftex.def)             Requested size: 211.39137pt x 140.92758pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./graph/paleoliche.jpg>] [
-2]
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./graph/paleoliche.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+ [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-<eolcont.png, id=20, 586.19pt x 318.18875pt>
+<eolcont.png, id=24, 586.19pt x 318.18875pt>
 File: eolcont.png Graphic file (type png)
  <use eolcont.png>
-Package pdftex.def Info: eolcont.png used on input line 149.
+Package pdftex.def Info: eolcont.png used on input line 175.
 (pdftex.def)             Requested size: 351.7167pt x 190.9147pt.
 
-Overfull \hbox (6.7167pt too wide) in paragraph at lines 149--150
+Overfull \hbox (6.7167pt too wide) in paragraph at lines 175--176
  [] 
  []
 
-[3 <./eolcont.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
+
+ []
+
+[4 <./eolcont.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
-
-Overfull \hbox (62.01933pt too wide) detected at line 264
+Overfull \hbox (62.01933pt too wide) detected at line 290
 \OML/cmm/m/it/10 K \OT1/cmr/m/n/10 = [] = [] [] = [] = [] = []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-[4] <graph/ycont.png, id=30, 411.136pt x 308.352pt>
+[5] <graph/ycont.png, id=33, 411.136pt x 308.352pt>
 File: graph/ycont.png Graphic file (type png)
  <use graph/ycont.png>
-Package pdftex.def Info: graph/ycont.png used on input line 274.
+Package pdftex.def Info: graph/ycont.png used on input line 297.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-<graph/ucont.png, id=31, 411.136pt x 308.352pt>
+Overfull \hbox (5.8299pt too wide) in paragraph at lines 299--302
+\T1/cmr/m/n/10 É pos-si-bile no-tare l'effeto del con-trollo oltre quello pro-p
+orzionale , che l'integrativo
+ []
+
+<graph/ucont.png, id=34, 411.136pt x 308.352pt>
 File: graph/ucont.png Graphic file (type png)
  <use graph/ucont.png>
-Package pdftex.def Info: graph/ucont.png used on input line 278.
+Package pdftex.def Info: graph/ucont.png used on input line 303.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-<graph/ycontsin.png, id=32, 411.136pt x 308.352pt>
+<graph/ycontsin.png, id=35, 411.136pt x 308.352pt>
 File: graph/ycontsin.png Graphic file (type png)
  <use graph/ycontsin.png>
-Package pdftex.def Info: graph/ycontsin.png used on input line 282.
+Package pdftex.def Info: graph/ycontsin.png used on input line 307.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-[5 <./graph/ycont.png (PNG copy)> <./graph/ucont.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+[6 <./graph/ycont.png (PNG copy)> <./graph/ucont.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
-<graph/ucontsin.png, id=36, 411.136pt x 308.352pt>
+<graph/ucontsin.png, id=39, 411.136pt x 308.352pt>
 File: graph/ucontsin.png Graphic file (type png)
  <use graph/ucontsin.png>
-Package pdftex.def Info: graph/ucontsin.png used on input line 286.
+Package pdftex.def Info: graph/ucontsin.png used on input line 311.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-[6 <./graph/ycontsin.png (PNG copy)> <./graph/ucontsin.png (PNG copy)>]
-<eoltrig.png, id=40, 579.16376pt x 361.35pt>
+Underfull \hbox (badness 10000) in paragraph at lines 314--321
+
+ []
+
+[7 <./graph/ycontsin.png (PNG copy)> <./graph/ucontsin.png (PNG copy)>]
+<eoltrig.png, id=44, 579.16376pt x 361.35pt>
 File: eoltrig.png Graphic file (type png)
  <use eoltrig.png>
-Package pdftex.def Info: eoltrig.png used on input line 300.
+Package pdftex.def Info: eoltrig.png used on input line 328.
 (pdftex.def)             Requested size: 347.50093pt x 216.81168pt.
 
-Overfull \hbox (2.50093pt too wide) in paragraph at lines 300--301
+Overfull \hbox (2.50093pt too wide) in paragraph at lines 328--329
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+[8 <./eoltrig.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
-
- []
-
-[7 <./eoltrig.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
-<graph/ydisc.png, id=46, 411.136pt x 308.352pt>
+[9] <graph/ydisc.png, id=52, 411.136pt x 308.352pt>
 File: graph/ydisc.png Graphic file (type png)
  <use graph/ydisc.png>
-Package pdftex.def Info: graph/ydisc.png used on input line 386.
+Package pdftex.def Info: graph/ydisc.png used on input line 414.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
-<graph/udisc.png, id=50, 411.136pt x 308.352pt>
+<graph/udisc.png, id=53, 411.136pt x 308.352pt>
 File: graph/udisc.png Graphic file (type png)
  <use graph/udisc.png>
-Package pdftex.def Info: graph/udisc.png used on input line 391.
+Package pdftex.def Info: graph/udisc.png used on input line 419.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
-<graph/trigger1.png, id=51, 1044.703pt x 355.729pt>
+[10 <./graph/ydisc.png (PNG copy)> <./graph/udisc.png (PNG copy)>]
+<graph/trigger1.png, id=57, 1044.703pt x 355.729pt>
 File: graph/trigger1.png Graphic file (type png)
  <use graph/trigger1.png>
-Package pdftex.def Info: graph/trigger1.png used on input line 395.
+Package pdftex.def Info: graph/trigger1.png used on input line 423.
 (pdftex.def)             Requested size: 417.8738pt x 142.28908pt.
 
-Overfull \hbox (72.8738pt too wide) in paragraph at lines 395--396
+Overfull \hbox (72.8738pt too wide) in paragraph at lines 423--424
  [] 
  []
 
-[9 <./graph/ydisc.png (PNG copy)> <./graph/udisc.png (PNG copy)>]
-<graph/ydiscsin.png, id=55, 411.136pt x 308.352pt>
+<graph/ydiscsin.png, id=58, 411.136pt x 308.352pt>
 File: graph/ydiscsin.png Graphic file (type png)
  <use graph/ydiscsin.png>
-Package pdftex.def Info: graph/ydiscsin.png used on input line 400.
+Package pdftex.def Info: graph/ydiscsin.png used on input line 428.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-<graph/udiscsin.png, id=56, 411.136pt x 308.352pt>
+<graph/udiscsin.png, id=59, 411.136pt x 308.352pt>
 File: graph/udiscsin.png Graphic file (type png)
  <use graph/udiscsin.png>
-Package pdftex.def Info: graph/udiscsin.png used on input line 404.
+Package pdftex.def Info: graph/udiscsin.png used on input line 432.
 (pdftex.def)             Requested size: 246.6835pt x 185.01262pt.
 
-[10 <./graph/trigger1.png (PNG copy)> <./graph/ydiscsin.png (PNG copy)>]
-<graph/trigger2.png, id=60, 1044.703pt x 355.729pt>
+[11 <./graph/trigger1.png (PNG copy)> <./graph/ydiscsin.png (PNG copy)>]
+<graph/trigger2.png, id=63, 1044.703pt x 355.729pt>
 File: graph/trigger2.png Graphic file (type png)
  <use graph/trigger2.png>
-Package pdftex.def Info: graph/trigger2.png used on input line 408.
+Package pdftex.def Info: graph/trigger2.png used on input line 436.
 (pdftex.def)             Requested size: 417.8738pt x 142.28908pt.
 
-Overfull \hbox (72.8738pt too wide) in paragraph at lines 408--409
+Overfull \hbox (72.8738pt too wide) in paragraph at lines 436--437
  [] 
  []
 
-[11 <./graph/udiscsin.png (PNG copy)> <./graph/trigger2.png (PNG copy)>]
+[12 <./graph/udiscsin.png (PNG copy)> <./graph/trigger2.png (PNG copy)>]
 (./TESINAFINALE.aux) ) 
 Here is how much of TeX's memory you used:
- 4490 strings out of 494901
- 57543 string characters out of 6179487
+ 4507 strings out of 494901
+ 57834 string characters out of 6179487
  226728 words of memory out of 5000000
- 7675 multiletter control sequences out of 15000+600000
+ 7689 multiletter control sequences out of 15000+600000
  15234 words of font info for 52 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  37i,9n,26p,823b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -587,10 +598,10 @@ s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on TESINAFINALE.pdf (11 pages, 276200 bytes).
+Output written on TESINAFINALE.pdf (12 pages, 279402 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 286 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
