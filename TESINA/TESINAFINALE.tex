@@ -15,7 +15,7 @@
 \includegraphics[scale=0.6]{graph/paleoliche.jpg}
 \end{center}
 
-Una turbina eolica \'e un dispositivo che consente di estrarre energia dal vento , la quale \'e composta da una torre alla cui estremita\'a \'e fissata una carlinga contenente il generatore il quale \'e collegato al rotore attraverso la trasmissione.
+Una turbina eolica \'e un dispositivo che consente di estrarre energia dal vento , la quale \'e composta da una torre alla cui estremit\'a \'e fissata una carlinga contenente il generatore il quale \'e collegato al rotore attraverso la trasmissione.
 Il rotore presenta due pale ad inclinazione variabile (blade pitch angle).
 In alcune macchine l'inclinazione delle pale varia indipendentemente l'una dall'altra (indipendent blade pitch) , nel nostro caso , l'inclinazione di ogni pala varier\'a identicamente (blade collective pitch).
 Il generatore \'e progettato in base alle specifiche della rete a cui \'e accoppiato, in generale , la velocit\'a rotorica del generatore \'e variabile , nel nostro caso \'e fissata in base alla frequenza della rete.
@@ -424,7 +424,157 @@ Non andremo direttamente a tradurre tutto il processo nell'ambito discreto ma fa
 \includegraphics[scale=0.4]{graph/trigger2.png}
 \end{center}
 
+\section{Codice Simnon}
+Il progetto Simnon implementa fedelmente il modello continuo ed il modello event-triggered descritto da questa tesina.
+Iniziamo con l'analisi del codice relativo al file SEOL.T
 
+MACRO SEOL
+error 1e-6
+syst CEOL DEOL CONEOL
+store y1 y u w  ET[CEOL] e1 ne nr nx uc[CEOL] er[CEOL]
+simu 0 20
+END
+
+Con lo store stiamo dicendo al programma di tenere in memoria le seguenti variabili:
+\begin{itemize}
+\item $y_1$      uscita del sistema
+\item $y$        uscita del controllore
+\item $u$        switch che ci consente di passare dal continuo al discreto
+\item $w$        velocit\'a del vento
+\item $ET[CEOL]$ ingresso al controllore relativo all'implementazione dell'event triggering proveniente                      dal file CEOL.T
+\item $e1$       errore tra lo stato e lo stato dipendente dal trigger
+\item $ne$       modulo dell'errore
+\item $nr$       valore di soglia oltre il quale campiono
+\item $nx$       modulo dello stato
+\item $uc[CEOL]$ ingresso nel caso continuo , il controllo viene direttamente all'interno del file CEOL.T
+\item $er[CEOL]$ errore tra lo stato dipendente dal trigger e il riferimento  
+\end{itemize}
+
+Con il comando simu stiamo effettuando una simulazione per 20 secondi a partire dall'istante 0.
+
+A seguire analizziamo il codice relativo al file CONEOL.T il quale serve essenzialmente per relazionare le variabili di input-output tra le varie classi che le generano e quelle che le richiedono
+
+CONNECTING SYSTEM CONEOL
+TIME t
+
+ud1[DEOL]=42 
+
+ud2[DEOL]=y1[CEOL] 
+
+ET[DEOL]=ET[CEOL] 
+
+ud[CEOL]=y[DEOL] 
+
+x1k[CEOL]=x1k[DEOL] 
+
+w[CEOL]=t 
+
+END
+Procedendo con ordine abbiamo:
+\begin{itemize}
+\item $ud1$                 riferimento utilizzato per il sistema controreazionato
+\item $ud2[DEOL]=y1[CEOL]$  l'uscita viene collegata all'ingresso per effettuare la retroazione
+\item $ET[DEOL]=ET[CEOL]$   collega l'uscita ET(trigger) del processo all'ingresso ET del controllore 
+\item $ud[CEOL]=y[DEOL]$    l'uscita del controllore viene reinserita nel processo , PITCH
+\item $x1k[CEOL]=x1k[DEOL]$ stato del controllo comandato dal trigger
+\item $w[CEOL]=t$           disturbo del vento
+\end{itemize}
+
+Per quanto riguarda il codice relativo al file CEOL.T riferito al modello continuo abbiamo
+
+CONTINUOUS SYSTEM CEOL
+
+
+INPUT xr w ud x1k 
+OUTPUT y1 ET
+
+STATE x1 I 
+DER dx1 dI
+TIME t
+
+u=FC*uc+(1-FC)*ud 
+er=y1-xr
+uc=kcp*er+ki*I 
+dI=er
+dx1=a*x1+b*u+e*w 
+y1=x1 
+e1=x1-x1k 
+ne=sqrt(sqr(e1)) 
+nx=sqrt(sqr(x1)) 
+rhomax=2*theta*0.5/20.1443 "
+nr=rhomax*nx
+ET=If ne<nr Then 0 Else 1
+
+a:-0.1205
+b:-2.882
+e:0.0658
+FC:0
+theta: 0.9
+kcp:0.652 "autovalori -1
+ki:0.347
+
+escludendo le variabili specificate in precedenza abbiamo
+\begin{itemize}
+\item $u$      switch implementato per il controllo continuo
+\item $uc$     ingresso nel caso continuo , il controllo viene direttamente all'interno del file CEOL
+\item $dx1$    derivata dello spazio di stato
+\item $y1$     uscita in riferimento ad un valore C=1
+\item $e1$     errore tra lo stato e lo stato dipendente dal trigger
+\item $ne$     modulo dell'errore
+\item $nx$     modulo dello stato
+\item $rhomax$ indice relativo al trigger
+
+\item $a$      riferito a $\gamma=\frac{\delta \, T_{aero}}{\delta \, \Omega}$
+\item $b$      riferito a $\sigma=\frac{\delta \, T_{aero}}{\delta \, \beta}$
+\item $e$      riferito a $\alpha=\frac{\delta \, T_{aero}}{\delta \, \omega}$
+\item $FC$
+\item $theta$
+\item $kcp$    $K_{p}$ guadagno proporzionale
+\item $ki$     $K_{i}$ guadagno integrativo
+\end{itemize}
+
+Infine andiamo ad analizzare il codice relativo all'ultimo file DEOL.T riferito al modello discreto
+
+DISCRETE SYSTEM DEOL
+
+INPUT ud1 ud2 ET
+
+OUTPUT y x1k
+
+STATE deltak z1 I
+
+NEW  deltakp z1p dI
+TIME t
+TSAMP ts
+
+er=x1k-42
+ts=t+delta
+y=er*kp+ki*I
+deltakp=deltak+ET*(t-deltak)
+z1p=z1+ET*(-z1+ud2)
+x1k=z1
+dI=er
+
+kp= 0.652 
+ki= 0.347 
+delta=1e-3
+
+END
+
+Dove:
+\begin{itemize}
+\item $ud1$     ud1 variabile del riferimento
+\item $ud2$     ud2 uscita del sistema (velocita di rotazione del rotore)
+\item $ET$      trigger 
+\item $y$       uscita del controllore
+\item $x1k$     stato dipendente dal trigger (in output)
+\item $e$       errore tra lo stato dipendente dal trigger e riferimento
+\item $z1 e zp$ stato e derivato dipendenti dal trigger
+\item $e$       uscita dello stato del trigger
+\item $kp$      guadagno proporzionale
+\item $ki$      guadagno integrativo
+\item $x1k$     variabile di riferiemnto per eseguire operazione di controllo 
+\end{itemize}
 
 \end{document}
 
