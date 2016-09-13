@@ -106,7 +106,7 @@ Quindi:
 	\dot{e}=\dot{x}=a(e+x_{r})+bu+\gamma w_{d}\,\,\:           %-------------spiegazione equazione--------
 	\Rightarrow u=u_e-\frac{a}{b} x_{r}-\frac{\gamma}{b} w_{d}
 \end{equation*} \\
-Dove $u_e$ rappresenter\'a l'errore desiderato che nel nostro vogliamo sia zero.\\
+Dove $u_e$ rappresenter\'a l'errore desiderato che nel nostro caso vogliamo sia zero.\\
 Volendo attivare un controllo di tipo intergrativo oltre a quello proporzionale
 inserisco un ulteriore stato che chiamer\'o $I_e$.\\
 A questo punto dopo il cambio di variabile e l'aggiunta di tutto il necessario
@@ -119,7 +119,7 @@ per il calcolo delle costanti , ottengo un sistema del tipo :
 	
 \end{cases}\]
 
-Percio il modello del nostro spazio di stato sar\'a riscritto in tal modo:
+Perciò il modello del nostro spazio di stato sar\'a riscritto in tal modo:
 \begin{equation*}	
 \begin{pmatrix}
 	
@@ -502,28 +502,26 @@ OUTPUT y1 ET
 
 STATE x1 I 
 DER dx1 dI
-TIME t
-
-u=FC*uc+(1-FC)*ud 
-er=y1-xr
-uc=kcp*er+ki*I 
-dI=er
-dx1=a*x1+b*u+e*w 
-y1=x1 
-e1=x1-x1k 
-ne=sqrt(sqr(e1)) 
-nx=sqrt(sqr(x1)) 
-rhomax=2*theta*0.5/20.1443 "
-nr=rhomax*nx
-ET=If ne<nr Then 0 Else 1
-
-a:-0.1205
-b:-2.882
-e:0.0658
-FC:0
-theta: 0.9
-kcp:0.652 "autovalori -1
-ki:0.347
+TIME t\\
+u=FC*uc+(1-FC)*ud \\
+er=y1-xr\\
+uc=kcp*er+ki*I\\ 
+dI=er\\
+dx1=a*x1+b*u+e*w\\ 
+y1=x1 \\
+e1=x1-x1k\\ 
+ne=sqrt(sqr(e1))\\ 
+nx=sqrt(sqr(x1)) \\
+rhomax=2*theta*0.5/20.1443\\
+nr=rhomax*nx\\
+ET=If ne<nr Then 0 Else 1\\
+a:-0.1205\\
+b:-2.882\\
+e:0.0658\\
+FC:0\\
+theta: 0.9\\
+kcp:0.652\\
+ki:0.347\\
 
 escludendo le variabili specificate in precedenza abbiamo
 \begin{itemize}
@@ -557,19 +555,17 @@ STATE deltak z1 I
 
 NEW  deltakp z1p dI
 TIME t
-TSAMP ts
-
-er=x1k-42
-ts=t+delta
-y=er*kp+ki*I
-deltakp=deltak+ET*(t-deltak)
-z1p=z1+ET*(-z1+ud2)
-x1k=z1
-dI=er
-
-kp= 0.652 
-ki= 0.347 
-delta=1e-3
+TSAMP ts\\
+er=x1k-42\\
+ts=t+delta\\
+y=er*kp+ki*I\\
+deltakp=deltak+ET*(t-deltak)\\
+z1p=z1+ET*(-z1+ud2)\\
+x1k=z1\\
+dI=er\\
+kp= 0.652 \\
+ki= 0.347 \\
+delta=1e-3\\
 
 END
 
