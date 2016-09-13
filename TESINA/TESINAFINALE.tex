@@ -104,7 +104,7 @@ Quindi:
 
 \begin{equation*}
 	\dot{e}=\dot{x}=a(e+x_{r})+bu+\gamma w_{d}\,\,\:           %-------------spiegazione equazione--------
-	\Rightarrow u=u_e-\frac{a}{b} x_{r}-\frac{\gamma}{b} w_{d}
+	\Rightarrow u=-\frac{a}{b} x_{r}-\frac{\gamma}{b} w_{d}
 \end{equation*} \\
 Dove $u_e$ rappresenter\'a l'errore desiderato che nel nostro caso vogliamo sia zero.\\
 Volendo attivare un controllo di tipo intergrativo oltre a quello proporzionale
@@ -115,7 +115,7 @@ per il calcolo delle costanti , ottengo un sistema del tipo :
 \begin{cases}
 	
 	\dot{I_{e}}= e \\
-	\dot{e} = a\,e + b\,u_e
+	\dot{e} = a\,e + b\,u
 	
 \end{cases}\]
 
@@ -140,7 +140,7 @@ Perciò il modello del nostro spazio di stato sar\'a riscritto in tal modo:
 
 	0\\b
 
-\end{pmatrix} u_e
+\end{pmatrix} u
 \end{equation*} \\
 Per andare a calcolare i guadagni dei singoli controlli esplicitiamo la matrice dinamica A:        %-------matrice A------------
 \begin{equation*}
@@ -167,7 +167,7 @@ viene visto nella seguente forma dopo essere
 
 	
 \begin{equation*}
-	u_x=K_{p}\,e+K_{i}\int_{0}^{t} e \, d\tau              %------------------modello del controllo---------------
+	u_x=u_r+K_{p}\,x+K_{i}\int_{0}^{t} x \, d\tau              %------------------modello del controllo---------------
 \end{equation*}	
 Il nostro sistema controllato a questo punto si presenta cos\'i :
 
